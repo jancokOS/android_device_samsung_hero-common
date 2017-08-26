@@ -48,6 +48,15 @@ TARGET_CUSTOM_DTBTOOL := dtbhtoolExynos
 # Packaging
 BLOCK_BASED_OTA := false
 
+# Enable dexpreopt to speed boot time
+ifeq ($(HOST_OS),linux)
+  ifneq ($(TARGET_BUILD_VARIANT),eng)
+    ifeq ($(WITH_DEXPREOPT),)
+      WITH_DEXPREOPT := true
+    endif
+  endif
+endif
+
 # Properties
 TARGET_SYSTEM_PROP := device/samsung/hero-common/system.prop
 
