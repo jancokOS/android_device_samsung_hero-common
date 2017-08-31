@@ -33,6 +33,7 @@ ENABLE_CPUSETS := true
 TARGET_USES_64_BIT_BINDER := true
 
 # Extracted with libbootimg
+BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
@@ -75,8 +76,8 @@ TARGET_POWERHAL_VARIANT := samsung
 TARGET_SEC_FP_HAL_VARIANT := bauth
 
 # Samsung Hardware
-BOARD_HARDWARE_CLASS += device/samsung/hero-common/cmhw
-BOARD_HARDWARE_CLASS += hardware/samsung/cmhw
+#BOARD_HARDWARE_CLASS += device/samsung/hero-common/cmhw
+#BOARD_HARDWARE_CLASS += hardware/samsung/cmhw
 
 # Samsung Camera
 BOARD_USE_SAMSUNG_CAMERAFORMAT_NV21 := true
@@ -142,12 +143,6 @@ BOARD_MODEM_TYPE := ss333
 
 # RIL.java overwrite
 BOARD_RIL_CLASS := ../../../$(LOCAL_PATH)/ril
-
-# Boot animation
-TARGET_BOOTANIMATION_PRELOAD := true
-TARGET_BOOTANIMATION_TEXTURE_CACHE := true
-TARGET_SCREEN_HEIGHT := 2048
-TARGET_SCREEN_WIDTH := 1536
 
 # Properties
 TARGET_SYSTEM_PROP := device/samsung/hero-common/system.prop
