@@ -93,6 +93,9 @@ PRODUCT_PACKAGES += \
 ###########################################################
 ### PACKAGES
 ###########################################################
+# hardware/samsung/AdvancedDisplay (MDNIE)
+PRODUCT_PACKAGES += \
+    AdvancedDisplay
 
 PRODUCT_PACKAGES += \
 	libsamsung_symbols \
